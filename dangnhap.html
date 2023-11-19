@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="dangnhap.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body class="body">
+    <div class="container">
+        <form id="loginForm" action="login" method="post">
+            <div class="box-login">
+                <div>
+                    <img src="https://www.utc.edu.vn/assets/admin/images/logo.png" alt="" style="width: 450px; position: relative; left: 25px; top: 20px; padding-bottom: 20px">
+                </div>
+                <div>
+                    <span>
+                        <img src="https://www.utc.edu.vn/assets/admin/images/login_mail.png" alt="" class="img-user">
+                    </span>
+                    <input class="input" type="text" name="email" placeholder="Địa chỉ email/MSSV...">
+                    <span>
+                        <img src="https://www.utc.edu.vn/assets/admin/images/login_key.png" alt="" class="img-user">
+                    </span>
+                    <input class="input-1" type="password" name="password" placeholder="Nhập vào mật khẩu">
+                    <input type="checkbox" style="position: relative;top: 50px; left:30px"><span style="position: relative; top: 49px; left: 40px;">Duy trì đăng nhập</span>
+                    <div>
+                        <button class="Nut" type="submit" style="width: 435px; height: 45px; position: relative; top:70px ; left: 40px; color: white; background-color: #7ec142; border: none; border-radius: 10px 10px 10px 10px;">Đăng nhập</button>
+                    </div>
+                    <div>
+                        <input  class="HienMk" type="checkbox" style="position: relative;top: -14px; left:335px"><span   style="position: relative; top: -15px; left: 335px;">Hiện mật khẩu</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#loginForm").submit(function (event) {
+                event.preventDefault(); // Ngăn chặn form submit theo cách thông thường
+
+                // Giả sử có logic kiểm tra đăng nhập ở đây (bạn có thể thêm kiểm tra hơn)
+                var email = $(".input[type='text']").val();
+                var password = $(".input-1[type='password']").val();
+
+                // Kiểm tra đơn giản cho mục đích minh họa
+                if (email == "vomthang1603@gmail.com" && password == "112211") {
+                    // Hiển thị thông báo thành công
+                    alert("Đăng nhập thành công");
+
+                    // Chuyển hướng đến index1.html
+                    window.location.href = "index1.html";
+                } else {
+                    // Hiển thị thông báo lỗi hoặc xử lý đăng nhập thất bại
+                    alert("Đăng nhập không thành công. Vui lòng kiểm tra lại thông tin đăng nhập.");
+                }
+            });
+        });
+        $(".HienMk").change(function () {
+                var passwordInput = $(".input-1[type='password']");
+                if ($(this).prop("checked")) {
+                    passwordInput.attr("type", "text");
+                }
+                else {
+                    passwordInput.attr("type", "password");
+                }
+            });
+
+    </script>
+</body>
+</html>

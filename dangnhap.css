@@ -1,0 +1,56 @@
+body{
+    background-color: #0575b2;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1170px;
+}
+.box-login{
+    margin-right: auto;
+    margin-left: auto;
+    width: 510px;
+    height: 400px;
+    background-color: white;
+    margin-top: 90px;
+    border-radius: 10px 10px 10px 10px;
+}
+.input{
+    position: relative;
+    display: flex;
+    width: 380px;
+    height: 45px;
+    margin-bottom: -30px;
+    left: 80px;
+    border-radius: 5px 5px 5px 5px ;
+    border:  black solid 0.5px;
+    padding-left: 10px;
+}
+.img-user{
+    box-sizing: border-box;
+    border: none;
+    position: relative;
+    left: 35px;
+    top:  48px;
+    vertical-align: middle; 
+    background-color: ; 
+    height: 47px;
+    width: 45px;
+    border: solid 0.5px black;
+    border-radius: 5px 5px 5px 5px;
+}
+.HienMK {
+    position: relative;
+    top: -14px;
+    left;:355px
+}
+.input-1 {
+    position: relative;
+    display: flex;
+    width: 380px;
+    height: 45px;
+    margin-bottom: -30px;
+    left: 80px;
+    border-radius: 5px 5px 5px 5px;
+    border: black solid 0.5px;
+    padding-left: 10px;
+}
